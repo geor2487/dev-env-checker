@@ -35,8 +35,23 @@ async function checkTool({ name, command, args, parseLine }) {
   }
 }
 
+function printBanner() {
+  console.log(`
+  ____             _____
+ |  _ \\  _____   _| ____|_ ____   __
+ | | | |/ _ \\ \\ / /  _| | '_ \\ \\ / /
+ | |_| |  __/\\ V /| |___| | | \\ V /
+ |____/ \\___| \\_/ |_____|_| |_|\\_/
+   ____ _               _
+  / ___| |__   ___  ___| | _____ _ __
+ | |   | '_ \\ / _ \\/ __| |/ / _ \\ '__|
+ | |___| | | |  __/ (__|   <  __/ |
+  \\____|_| |_|\\___|\\___|_|\\_\\___|_|
+`);
+}
+
 async function main() {
-  console.log();
+  printBanner();
   console.log(bold("Dev Environment Checker"));
   console.log("─".repeat(40));
 
@@ -49,6 +64,8 @@ async function main() {
 
   if (allOk) {
     console.log("🎉 All tools are installed!");
+    console.log();
+    console.log(bold("セットアップ完了！研修を始める準備ができました"));
   } else {
     console.log(`⚠️  ${ngCount} tool(s) not found.`);
   }
