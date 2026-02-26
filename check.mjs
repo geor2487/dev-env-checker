@@ -19,6 +19,8 @@ const tools = [
   },
   { name: "Ghostty", command: "ghostty", args: ["--version"] },
   { name: "Docker", command: "docker", args: ["--version"] },
+  { name: "Python", command: "python3", args: ["--version"] },
+  { name: "Java", command: "java", args: ["--version"], parseLine: 0 },
 ];
 
 async function checkTool({ name, command, args, parseLine }) {
