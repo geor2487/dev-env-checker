@@ -20,6 +20,7 @@ node check.mjs
 | Claude Code | `claude` | `claude --version` |
 | VSCode | `code` | `code --version` |
 | Ghostty | `ghostty` | `ghostty --version` |
+| Docker | `docker` | `docker --version` |
 
 ## results.json
 
